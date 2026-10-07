@@ -1,0 +1,15 @@
+{
+  "name": "samvidhan-quest",
+  "version": "1.0.0",
+  "description": "Gamified Indian Constitution Learning Platform",
+  "scripts": {
+    "backend": "cd backend && npm run dev",
+    "frontend": "cd frontend && npm run dev",
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
+    "seed": "cd backend && node seed/seedData.js",
+    "install-all": "npm install && cd backend && npm install && cd ../frontend && npm install"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

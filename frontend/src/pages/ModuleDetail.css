@@ -1,0 +1,48 @@
+.module-hero {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 32px;
+  background: var(--gradient-card);
+  border: var(--border-glass);
+  border-radius: var(--radius-xl);
+  margin-bottom: 24px;
+}
+.module-hero-icon { font-size: 4rem; }
+.module-hero-info h1 { font-size: 1.8rem; margin: 8px 0; }
+.module-hero-info > p { color: var(--text-secondary); margin-bottom: 12px; }
+.module-hero-meta { display: flex; gap: 8px; flex-wrap: wrap; }
+
+.module-content { padding: 32px; margin-bottom: 24px; }
+.content-body p { margin-bottom: 12px; line-height: 1.8; color: var(--text-secondary); }
+.content-body .content-heading { color: var(--saffron); margin: 20px 0 8px; font-size: 1.1rem; }
+.content-body .content-list-item { margin-left: 20px; margin-bottom: 6px; color: var(--text-secondary); line-height: 1.6; }
+
+.module-articles { margin-bottom: 24px; }
+.module-articles h2 { margin-bottom: 16px; font-size: 1.3rem; }
+.articles-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 12px; }
+.article-card { padding: 20px; }
+.article-number { font-family: var(--font-heading); font-weight: 800; color: var(--saffron); font-size: 0.85rem; margin-bottom: 4px; }
+.article-card h4 { font-size: 0.95rem; margin-bottom: 6px; }
+.article-card p { font-size: 0.85rem; color: var(--text-secondary); }
+
+.fun-facts { margin-bottom: 24px; }
+.fun-facts h2 { margin-bottom: 16px; font-size: 1.3rem; }
+.facts-list { display: flex; flex-direction: column; gap: 8px; }
+.fact-item { display: flex; align-items: center; gap: 12px; padding: 14px 18px; }
+.fact-icon { font-size: 1.2rem; }
+.fact-item p { font-size: 0.9rem; color: var(--text-secondary); }
+
+.complete-section { text-align: center; margin: 32px 0; }
+
+.module-games { margin-bottom: 40px; }
+.module-games h2 { font-size: 1.3rem; margin-bottom: 4px; }
+.games-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+.game-link { display: flex; align-items: center; gap: 10px; padding: 16px; text-decoration: none; color: var(--text-primary); font-weight: 500; }
+.game-link-icon { font-size: 1.5rem; }
+
+@media (max-width: 768px) {
+  .module-hero { flex-direction: column; padding: 20px; }
+  .module-hero-icon { font-size: 3rem; }
+  .module-hero-info h1 { font-size: 1.4rem; }
+}

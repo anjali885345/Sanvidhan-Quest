@@ -1,0 +1,25 @@
+.xp-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 32px;
+  background: rgba(255, 153, 51, 0.2);
+  backdrop-filter: blur(20px);
+  border: 2px solid var(--saffron);
+  border-radius: var(--radius-xl);
+  color: var(--saffron);
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 800;
+  z-index: 10000;
+  animation: xpPopup 2s ease forwards;
+  pointer-events: none;
+}
+
+.xp-popup-icon {
+  font-size: 2rem;
+}

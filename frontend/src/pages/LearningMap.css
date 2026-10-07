@@ -1,0 +1,131 @@
+.learning-path {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 20px 0;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.path-node-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.path-connector {
+  width: 3px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.connector-line {
+  width: 3px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+}
+
+.path-connector.completed .connector-line {
+  background: var(--gradient-green);
+  box-shadow: 0 0 8px rgba(19, 136, 8, 0.3);
+}
+
+.path-node {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+  width: 100%;
+  text-decoration: none;
+  color: var(--text-primary);
+  position: relative;
+  transition: all var(--transition-base);
+}
+
+.path-node.current {
+  border-color: rgba(255, 153, 51, 0.4);
+  animation: glow 3s ease-in-out infinite;
+}
+
+.path-node.completed {
+  border-color: rgba(19, 136, 8, 0.3);
+  background: rgba(19, 136, 8, 0.05);
+}
+
+.path-node.locked {
+  opacity: 0.45;
+  cursor: not-allowed;
+  filter: grayscale(0.5);
+}
+
+.path-node.locked:hover {
+  transform: none;
+  background: var(--bg-glass);
+}
+
+.node-number {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--bg-tertiary);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.path-node.current .node-number {
+  background: var(--gradient-saffron);
+  color: #fff;
+  border-color: var(--saffron);
+}
+
+.path-node.completed .node-number {
+  background: var(--gradient-green);
+  color: #fff;
+  border-color: var(--green);
+}
+
+.node-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.node-info { flex: 1; }
+.node-info h3 { font-size: 1.05rem; margin-bottom: 2px; }
+.node-info p { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 8px; }
+.node-meta { display: flex; gap: 6px; }
+.node-arrow { font-size: 1.3rem; color: var(--saffron); }
+
+.map-legend {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 32px;
+  padding: 16px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.legend-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.current-dot { background: var(--saffron); box-shadow: 0 0 8px rgba(255, 153, 51, 0.5); }
+.completed-dot { background: var(--green); }
+.locked-dot { background: var(--text-muted); opacity: 0.4; }

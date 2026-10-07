@@ -1,0 +1,39 @@
+.gallery-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+  color: var(--text-secondary);
+}
+
+.badge-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.badge-gallery-card {
+  padding: 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.badge-gallery-card.earned {
+  border-color: rgba(19, 136, 8, 0.3);
+  background: rgba(19, 136, 8, 0.05);
+}
+
+.badge-gallery-card.locked-badge {
+  opacity: 0.5;
+  filter: grayscale(0.7);
+}
+
+.badge-gallery-card.locked-badge:hover {
+  opacity: 0.7;
+  filter: grayscale(0.3);
+}
+
+.badge-lg-icon { font-size: 2.5rem; }
+.badge-gallery-card h4 { font-size: 1rem; }
+.badge-gallery-card p { font-size: 0.8rem; color: var(--text-secondary); }

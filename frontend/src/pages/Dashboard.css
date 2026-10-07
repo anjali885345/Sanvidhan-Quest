@@ -1,0 +1,184 @@
+.dashboard-hero {
+  background: var(--gradient-card);
+  border: var(--border-glass);
+  border-radius: var(--radius-xl);
+  padding: 36px;
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.hero-content h1 {
+  font-size: 2rem;
+  background: var(--gradient-hero);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-content p { color: var(--text-secondary); margin-top: 4px; }
+
+.hero-stats {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.hero-stat {
+  text-align: center;
+  padding: 12px 20px;
+  background: var(--bg-glass);
+  border: var(--border-glass);
+  border-radius: var(--radius-md);
+  min-width: 100px;
+}
+
+.hero-stat-value {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--saffron);
+}
+
+.hero-stat-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Daily CTA */
+.daily-cta {
+  display: block;
+  position: relative;
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(255, 153, 51, 0.1) 100%);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  border-radius: var(--radius-lg);
+  padding: 20px 28px;
+  margin-bottom: 32px;
+  text-decoration: none;
+  overflow: hidden;
+  transition: all var(--transition-base);
+  animation: glow 3s ease-in-out infinite;
+}
+
+.daily-cta:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 215, 0, 0.5);
+}
+
+.daily-cta-glow {
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(255, 215, 0, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.daily-cta-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.daily-icon { font-size: 2.5rem; animation: float 2s ease-in-out infinite; }
+.daily-cta h3 { color: #FFD700; font-size: 1.1rem; }
+.daily-cta p { color: var(--text-secondary); font-size: 0.9rem; }
+.daily-arrow { font-size: 1.5rem; color: #FFD700; margin-left: auto; }
+
+/* Continue Learning */
+.continue-section { margin-bottom: 32px; }
+
+.continue-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 24px;
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+.continue-icon { font-size: 2.5rem; }
+
+.continue-info { flex: 1; }
+.continue-info h3 { font-size: 1.2rem; margin-bottom: 4px; }
+.continue-info p { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 8px; }
+.continue-arrow { font-size: 1.5rem; color: var(--saffron); }
+
+/* Game Modes Grid */
+.game-modes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.game-mode-card {
+  padding: 24px 16px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.game-mode-card:hover {
+  transform: translateY(-4px);
+}
+
+.game-mode-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-md);
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  margin: 0 auto 12px;
+}
+
+.game-mode-card h3 { font-size: 1rem; margin-bottom: 4px; }
+.game-mode-card p { font-size: 0.8rem; color: var(--text-muted); }
+
+/* Modules Preview */
+.modules-preview {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.module-preview-card {
+  padding: 20px;
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+.module-preview-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.module-icon { font-size: 2rem; }
+.completed-check { font-size: 1.2rem; }
+
+.module-preview-card h4 { font-size: 0.95rem; margin-bottom: 4px; }
+.module-preview-card > p { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 10px; }
+
+.module-meta { display: flex; gap: 6px; flex-wrap: wrap; }
+
+@media (max-width: 768px) {
+  .dashboard-hero { padding: 24px; }
+  .hero-content h1 { font-size: 1.5rem; }
+  .hero-stats { gap: 12px; }
+  .game-modes-grid { grid-template-columns: repeat(2, 1fr); }
+}
